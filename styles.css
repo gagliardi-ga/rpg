@@ -1,0 +1,462 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333333;
+
+
+    width: 100%;
+    margin: 0px;
+    padding: 20px;
+    gap: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+tr:hover, td:hover, th:hover {
+    background-color: inherit !important; /* Mantém a cor original */
+}
+
+.linha-esquerda, .linha-meio, .linha-direita {
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.resume, .notas{
+    background-color: #555555;
+    color: rgb(233, 233, 233);
+    border-radius: 10px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.header-resume {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-resume-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.button-header-resume {
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #999999, #999999); /* Verde gradiente */
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.raca-geral, .classe-geral, .nivel-geral, .nome-geral {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    height: 20%;
+}
+
+.raca-input, .classe-input, .nivel-input, .nome-input {
+    font-weight: bold;
+}
+
+.ps, .ca {
+    background-color: #555555;
+    color: rgb(233, 233, 233);
+    border-radius: 10px;
+    height: 260px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui os elementos igualmente */
+    padding: 15px
+}
+
+.ps-value, .ps-dash, .ps-total, .ca-value {
+    font-size: 40px;
+    width: 50%;
+    background-color: #555555;
+    color: rgb(233, 233, 233);
+    border: 0px solid #555555;
+}
+
+.proficiencia-table-div, .atributos {
+    background-color: #555555;
+    color: rgb(233, 233, 233);
+    border-radius: 10px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui os elementos igualmente */
+    padding: 15px;
+    box-sizing: border-box; /* Evita que padding e border aumentem o tamanho */ 
+}
+
+.proficiencia-table {
+    background-color: #555555;
+    color: rgb(233, 233, 233);
+    border-radius: 10px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui os elementos igualmente */
+    padding: 15px;
+    margin-top: 20px;
+    box-sizing: border-box; /* Evita que padding e border aumentem o tamanho */
+
+}
+
+.habilidade-card-title {
+    width: 100%;
+    height: 80px;
+
+}
+
+.habilidade-card {
+    max-width: 100%;
+    height: 80px;
+    margin: 20px 0px 20px 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    
+}
+
+.habilidade-info-name {
+    width: 100px;
+}
+
+.skills {
+    background-color: #555555;
+    color: rgb(233, 233, 233);
+    border-radius: 10px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-sizing: border-box; 
+    overflow-y: scroll;
+}
+
+
+.attribute-table {
+    font-size: 15px;
+    table-layout: fixed;
+    overflow: scroll;
+    margin-top: 20px;
+}
+
+.label-atributo {
+    font-weight: bold;
+}
+
+
+input {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 300px; /* Limita a largura */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border: 2px solid #999999;
+    border-radius: 8px; /* Bordas arredondadas */
+    outline: none; /* Remove o contorno padrão */
+    transition: all 0.3s ease-in-out; /* Animação suave */
+    background-color: #999999;
+    color: #333333;
+    box-sizing: border-box; /* Evita que padding e border aumentem o tamanho */
+}
+
+/* Efeito ao clicar no input */
+input:focus {
+    border-color: #007bff; /* Cor azul ao focar */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Brilho ao redor */
+}
+
+/* Deixa o placeholder mais elegante */
+input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Efeito de hover */
+input:hover {
+    border-color: #888;
+}
+
+
+select {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 300px; /* Limita a largura */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border: 2px solid #999999; /* Cor da borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    outline: none; /* Remove o contorno padrão */
+    cursor: pointer; /* Muda o cursor ao passar */
+    transition: all 0.3s ease-in-out; /* Animação suave */
+    appearance: none; /* Remove a aparência padrão do sistema */
+    background-color: #999999;
+    color: #333333;
+}
+
+/* Efeito ao focar */
+select:focus {
+    border-color: #007bff; /* Cor azul ao focar */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Brilho ao redor */
+}
+
+.raca-select:invalid, .classe-select:invalid {
+    color: #aaa;
+    font-style: italic;
+}
+
+.raca-select option, .classe-select option {
+    color: #333333
+}
+
+/* Efeito ao passar o mouse */
+select:hover {
+    border-color: #888;
+}
+
+/* Estiliza a seta da caixa seletora */
+select::-ms-expand {
+    display: none; /* Remove a seta no Edge/IE */
+}
+
+select::after {
+    content: "▼"; /* Ícone da seta */
+    font-size: 14px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Não interfere no clique */
+}
+
+button {
+    background: linear-gradient(135deg, #333333, #333333); /* Verde gradiente */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #444444, #333333); /* Verde mais escuro */
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+tbody {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+td {
+    padding: 12px;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: white;
+}
+
+th {
+    text-align: left;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+}
+
+
+
+textarea {
+    height: 200px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    resize: vertical; /* Permite redimensionar apenas na vertical */
+    transition: all 0.3s ease-in-out;
+}
+
+textarea:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+
+/* Barra de rolagem fina e transparente */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Fundo leve */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4); /* Polegar mais transparente */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.6); /* Ao passar o mouse, o polegar fica mais escuro */
+}
+
+
+
+
+
+
+
+/* RESPONSIVO */
+
+@media screen and (max-width: 1500px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(2,1fr); /* Cria duas colunas de tamanho igual */
+        gap: 20px; /* Espaçamento entre as colunas */
+        margin: 0px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    
+    .linha-direita {
+        height: 100%;
+        width: 100%;
+        gap: 20px;
+        display: flex;
+        flex-direction: line;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Cria duas colunas de tamanho igual */
+        gap: 20px; /* Espaçamento entre as colunas */
+        margin: 0px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .linha-esquerda, .linha-meio, .linha-direita {
+        height: 100%;
+        width: 100%;
+    }
+
+    .atributos, .proficiencia-table, .skills {
+        background-color: #555555;
+        color: rgb(233, 233, 233);
+        border-radius: 10px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distribui os elementos igualmente */
+        padding: 15px;
+        box-sizing: border-box; /* Evita que padding e border aumentem o tamanho */
+        gap: 10px;
+    
+    }
+
+    input {
+        width: 60%; /* Ocupa toda a largura disponível */
+        max-width: 300px; /* Limita a largura */
+        padding: 10px; /* Espaçamento interno */
+        font-size: 16px; /* Tamanho da fonte */
+        border: 2px solid #999999;
+        border-radius: 8px; /* Bordas arredondadas */
+        outline: none; /* Remove o contorno padrão */
+        transition: all 0.3s ease-in-out; /* Animação suave */
+        background-color: #999999;
+        color: #333333;
+        box-sizing: border-box; /* Evita que padding e border aumentem o tamanho */
+    }
+
+    select {
+        width: 60%; /* Ocupa toda a largura disponível */
+        max-width: 300px; /* Limita a largura */
+        padding: 10px; /* Espaçamento interno */
+        font-size: 16px; /* Tamanho da fonte */
+        border: 2px solid #999999; /* Cor da borda */
+        border-radius: 8px; /* Bordas arredondadas */
+        outline: none; /* Remove o contorno padrão */
+        cursor: pointer; /* Muda o cursor ao passar */
+        transition: all 0.3s ease-in-out; /* Animação suave */
+        appearance: none; /* Remove a aparência padrão do sistema */
+        background-color: #999999;
+        color: #333333;
+        box-sizing: border-box;
+    }
+
+    .resume{
+        background-color: #555555;
+        color: rgb(233, 233, 233);
+        border-radius: 10px;
+        height: 100%;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+}
+
+

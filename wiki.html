@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de RPG</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p, ul {
+            line-height: 1.6;
+        }
+        .attribute-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        .attribute-table th, .attribute-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .attribute-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sistema de RPG</h1>
+        <a href="calculator.html">
+            <button>Ficha do personagem</button>
+        </a>
+    </header>
+    <main>
+        <section id="mecanica">
+            <h2>Mecânica</h2>
+            <h3>Batalha</h3>
+            <p>No início da batalha, é definida a ordem dos participantes (iniciativa) pela ordem decrescente dos resultados da rolagem de um d20, sendo do primeiro até o último.</p>
+            <p>Em caso de ataques silenciosos (stealth), a ordem pode ser definida pelos jogadores. O teste de sucesso deve ser feito com uma rolagem de d20 somando a habilidade (skill) de stealth.</p>
+            <p>O turno do participante é dividido em três etapas:</p>
+            <ul>
+                <li><strong>Ação principal:</strong> Ataques, consumo de itens ou uso de habilidades de suporte.</li>
+                <li><strong>Ação secundária:</strong> Movimentação pelo mapa.</li>
+                <li><strong>Ação bônus:</strong> Movimentos simples, como lançamento de objetos ou uso de habilidades específicas que contenham a propriedade de ação bônus.</li>
+            </ul>
+            <p>A ordem das ações pode ser escolhida pelo jogador.</p>
+            <p>Para efetuar um ataque, é feito um teste de Classe de Armadura (CA). Cada personagem possui sua própria CA. Para o sucesso, é necessário obter um resultado superior ao CA do alvo em um d20. Obtendo sucesso no teste de CA, o dano é calculado como descrito na habilidade escolhida.</p>
+        </section>
+
+        <section id="acoes">
+            <h2>Ações</h2>
+            <p>As ações são movimentações fora da batalha, como testes de persuasão, atletismo, conhecimento, etc. Todas essas ações são testadas usando um ou mais d20.</p>
+            <p>Essas ações levam em consideração modificadores de habilidades (skills), que são:</p>
+            <ul>
+                <li><strong>Força (str):</strong> Testes de força, como levantar objetos pesados, arrombamentos, etc.</li>
+                <li><strong>Atletismo (dex):</strong> Movimentos que exigem destreza, como saltar, escalar, etc.</li>
+                <li><strong>História (int):</strong> Conhecimento de ambientes, história, itens, etc.</li>
+                <li><strong>Intimidação (cha):</strong> Teste para persuadir.</li>
+                <li><strong>Dedução (cha):</strong> Detecção de verdades.</li>
+                <li><strong>Natureza (int):</strong> Manuseio de equipamentos de alquimia, identificação de plantas, fluidos, etc.</li>
+                <li><strong>Furtividade (dex):</strong> Pegar itens alheios, se esconder, ataques furtivos, etc.</li>
+            </ul>
+        </section>
+
+        <section id="atributos">
+            <h2>Atributos</h2>
+            <p>Os atributos são responsáveis pelos bônus de ataque e habilidades.</p>
+            <ul>
+                <li>Para atributos, a cada 4 pontos, há um bônus de +1;</li>
+                <li>O bônus de ataque é definido na descrição das habilidades especiais (habilidades que causam dano). O bônus é adicionado na rolagem de dados.</li>
+                <li>Para habilidades, a cada 2 pontos, há um bônus de +1;</li>
+                <li>O bônus adquirido na habilidade é somado na rolagem de dados.</li>
+                <li>2 pontos de Vitalidade (PS) são adicionados a cada ponto de Vigor.</li>
+                <li>Para cada nível, o personagem ganha 2 pontos para adicionar em qualquer atributo.</li>
+            </ul>
+        </section>
+
+        <section id="ca">
+            <h2>Classe de Armadura (CA)</h2>
+            <p>A Classe de Armadura é o número que o atacante precisa superar para conseguir ter sucesso em um ataque. Esse teste é feito com o lançamento de um d20.</p>
+            <p>Em caso de empate entre o resultado do d20 e o CA do alvo, o ataque terá sucesso.</p>
+            <p>A classe de armadura básica inicia em 12. A cada 2 pontos em Destreza, é adicionado +1 ponto em CA.</p>
+        </section>
+
+        <section id="racas">
+            <h2>Raças</h2>
+
+            <h3>Humanos</h3>
+            <p>Os humanos são a raça mais adaptável e diversificada. Eles se destacam pela sua ambição, versatilidade e capacidade de prosperar em qualquer ambiente. Sua cultura varia amplamente de região para região, refletindo sua tendência a se adaptar rapidamente às mudanças.</p>
+            <p><strong>Movimentação:</strong> 60ft.</p>
+            <p><strong>Vitalidade base:</strong> 10PS</p>
+            <table class="attribute-table">
+                <thead>
+                    <tr>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Força</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Destreza</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Inteligência</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Vigor</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Carisma</td>
+                        <td>6</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Elfos</h3>
+            <p>Elfos são conhecidos por sua longevidade, graça e afinidade com a magia e a natureza. Eles possuem uma beleza etérea e costumam viver em harmonia com as florestas e outros ambientes naturais.</p>
+            <p><strong>Movimentação:</strong> 60ft.</p>
+            <p><strong>Vitalidade base:</strong> 10PS</p>
+            <table class="attribute-table">
+                <thead>
+                    <tr>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Força</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Destreza</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Inteligência</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Vigor</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Carisma</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Anões</h3>
+            <p>Anões são conhecidos por sua resistência física, habilidade em mineração e forja, e sua cultura rica em tradições e honra. Eles vivem principalmente em cidades subterrâneas ou montanhosas e possuem uma natureza obstinada e leal.</p>
+            <p><strong>Movimentação:</strong> 50ft.</p>
+            <p><strong>Vitalidade base:</strong> 12PS</p>
+            <table class="attribute-table">
+                <thead>
+                    <tr>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Força</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Destreza</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Inteligência</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Vigor</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Carisma</td>
+                        <td>4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="classes">
+            <h2>Classes</h2>
+
+            <h3>Guerreiro</h3>
+            <p>Especialistas em combate corpo a corpo, os guerreiros são fortes e resilientes. Eles podem usar uma vasta gama de armas e armaduras, tornando-se a linha de frente em qualquer batalha.</p>
+            <ul>
+                <li><strong>Golpe Poderoso:</strong> Um ataque devastador que causa dano extra. Dano: 1d10 + Adicional de força.</li>
+                <li><strong>Defesa de Ferro:</strong> Aumenta a defesa do guerreiro temporariamente. Bônus: +5 CA durante 2 turnos.</li>
+                <li><strong>Grito de Batalha:</strong> Inspira aliados, aumentando o ataque deles. Bônus: +1 no dano.</li>
+                <li><strong>Investida:</strong> Corre em direção ao inimigo, causando dano e empurrando-o em 10ft. Dano: 1d8 + Adicional de força.</li>
+                <li><strong>Tornado de Lâminas:</strong> Ataca todos os inimigos ao redor, com um alcance de 10ft. Dano: 1d4 + Adicional de força + Adicional de destreza.</li>
+            </ul>
+
+            <h3>Mago</h3>
+            <p>Mestres do arcano, os magos dedicam suas vidas ao estudo das artes mágicas. Eles são capazes de lançar poderosos feitiços e encantamentos.</p>
+            <ul>
+                <li><strong>Bola de Fogo:</strong> Lança uma bola de fogo que explode ao impactar, causando dano de fogo em uma área. Alcance: 80ft. Dano: 1d8 + Adicional de inteligência.</li>
+                <li><strong>Raio Arcano:</strong> Dispara um feixe de energia arcana concentrada. Alcance: 80ft. Dano: 1d10 + Adicional de inteligência.</li>
+                <li><strong>Escudo Mágico:</strong> Cria um escudo mágico ao redor do mago, absorvendo danos. Bônus: +3 CA durante 2 turnos.</li>
+                <li><strong>Torção do Vórtice:</strong> Permite ao mago se deslocar instantaneamente para um local visível. Distância: 80ft.</li>
+                <li><strong>Invisibilidade:</strong> Torna o mago invisível por um curto período.</li>
+            </ul>
+
+            <h3>Druída</h3>
+            <p>Guardiões da natureza, os druidas possuem a habilidade de se transformar em animais e usar magias baseadas em elementos naturais.</p>
+            <ul>
+                <li><strong>Transformação Animal:</strong> Transforma-se em um animal (lobo, urso, águia, etc.).</li>
+                <li><strong>Cura da Natureza:</strong> Cura a si mesmo ou um aliado. Cura 5PS.</li>
+                <li><strong>Raízes Prendentes:</strong> Invoca raízes do solo para prender um inimigo por 2 turnos. O alvo deve passar em um teste de salvaguarda superior a 10 para escapar. Alcance: 70ft.</li>
+                <li><strong>Chuva de Espinhos:</strong> Lança espinhos de plantas em uma área, causando dano a todos os inimigos nela. Dano: 1d8.</li>
+                <li><strong>Comunhão com a Natureza:</strong> Permite ao druida se comunicar com os espíritos da natureza.</li>
+            </ul>
+
+            <h3>Caçador</h3>
+            <p>Mestres do arco e flecha, os caçadores são especialistas em ataques à distância. Eles frequentemente têm companheiros animais que lutam ao seu lado.</p>
+            <ul>
+                <li><strong>Tiro Preciso:</strong> Um tiro com alta precisão que causa dano crítico. Dano: 1d10.</li>
+                <li><strong>Armadilha de Urso:</strong> Coloca uma armadilha que prende e causa dano ao inimigo que a acionar. Dano: 1d20.</li>
+                <li><strong>Companheiro Animal:</strong> Convoca um animal para lutar ao lado do caçador. Dano: 1d4 + Adicional de destreza.</li>
+                <li><strong>Camuflagem:</strong> O caçador se mistura ao ambiente, aumentando sua CA em 5 pontos por 2 turnos.</li>
+                <li><strong>Tiro Explosivo:</strong> Um tiro que explode ao impactar, causando dano em área de 10ft de raio. Dano: 1d4 + Adicional de destreza.</li>
+            </ul>
+
+            <h3>Clérigo</h3>
+            <p>Devotos de divindades, os clérigos usam seus poderes divinos para curar aliados e castigar inimigos.</p>
+            <ul>
+                <li><strong>Cura Divina:</strong> Cura um aliado. Cura 3PS. Alcance: 70ft.</li>
+                <li><strong>Escudo de Fé:</strong> Cria um escudo protetor ao redor de um aliado, aumentando em 6 pontos sua CA por 1 turno.</li>
+                <li><strong>Luz Sagrada:</strong> Um feixe de luz sagrada que causa dano a inimigos e cura aliados no caminho. Dano: 1d12.</li>
+                <li><strong>Bênção:</strong> Abençoa um aliado, adicionando 1d4 no próximo dano do alvo selecionado.</li>
+                <li><strong>Crux Magnum:</strong> Centraliza a cruz divina em si, causando um dano em área no formato de uma cruz, 20ft para cada lado. Dano: 1d8 + Adicional de inteligência.</li>
+            </ul>
+
+            <h3>Bardo</h3>
+            <p>Mestres da música e da persuasão, os bardos usam suas habilidades artísticas para inspirar aliados e confundir inimigos.</p>
+            <ul>
+                <li><strong>Canção de Inspiração:</strong> Toca uma melodia que inspira aliados, adicionando 1d4 na rolagem de dano.</li>
+                <li><strong>Grito Desmoralizante:</strong> Um grito que desmoraliza os inimigos, reduzindo sua CA em 4 pontos.</li>
+                <li><strong>Maçãs do Éden:</strong> Uma música que cura 4 PS dos aliados à 20ft de distância.</li>
+                <li><strong>Encantamento:</strong> Usa uma música mágica para controlar ou influenciar um inimigo por 1 turno (não funciona em boss).</li>
+                <li><strong>Canção Dissonante:</strong> Uma performance que causa dano na direção de um feixe, atordoando todos que estão nesse caminho. Dano: 1d12.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
+
